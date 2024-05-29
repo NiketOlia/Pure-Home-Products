@@ -1,129 +1,136 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Home Products</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Home Products</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <video class="vidos" autoplay muted loop id="headerVideo">
-            <source src="VIDEO.mp4" type="video/mp4">
-        </video>
-        <div><button id="cartToggleBtn"><img class="binok"  src="BIN.png" alt="Корзина"></button>
-            <div class="cart-icon"></div> 
-            <span class="cart-notification" id="cartNotification"></span>
-        </div>
-    </header>
-
-    <div id="adminPanel" style="display: none;"> 
-        <h2>Панель администратора</h2>
-        <div>
-            <h3>Категории</h3>
-            <button onclick="addCategory();">Добавить категорию</button>
-            <button onclick="showRemoveCategoryModal(); closeAdminPanel();">Удалить категорию</button>
-            <h3>Товары</h3>
-            <label for="productName">Название:</label><br>
-            <input type="text" id="productName"><br><br>
-
-            <label for="productCategory">Категория:</label><br>
-            <select id="productCategory"></select><br><br>
-
-            <label for="productImageUrl">URL изображения:</label><br>
-            <input type="text" id="productImageUrl"><br><br>
-
-            <label for="productPrice">Цена:</label><br>
-            <input type="number" id="productPrice"><br><br>
-
-            <label for="productDescription">Описание:</label><br>
-            <textarea id="productDescription"></textarea><br><br>
-
-            <label for="productDelivery">Доставка:</label><br>
-            <input type="text" id="productDelivery"><br><br>
-
-            <button onclick="addProduct()">Добавить товар</button>
-            <button onclick="showRemoveProductModal(); closeAdminPanel();">Удалить товар</button>
-            <button onclick="closeAdminPanel()">Закрыть панель</button>
-        </div>
+  <header>
+    <video class="vidos" autoplay muted loop id="headerVideo">
+      <source src="VIDEO.mp4" type="video/mp4">
+    </video>
+    <div class="cart-container">
+      <button id="cartToggleBtn">
+        <img class="binok" src="BIN.png" alt="Корзина">
+        <span class="cart-notification" id="cartNotification"></span>
+      </button>
     </div>
+  </header>
 
-    <div id="removeProductModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeRemoveProductModal()">×</span>
-            <h2>Удалить товар</h2>
-            <ul id="productList"></ul> 
-        </div>
+  <div id="adminPanel" style="display: none;">
+    <h2>Панель администратора</h2>
+    <div>
+      <h3>Категории</h3>
+      <button onclick="addCategory();">Добавить категорию</button>
+      <button onclick="showRemoveCategoryModal(); closeAdminPanel();">Удалить категорию</button>
+      <h3>Товары</h3>
+      <label for="productName">Название:</label><br>
+      <input type="text" id="productName"><br><br>
+
+      <label for="productCategory">Категория:</label><br>
+      <select id="productCategory"></select><br><br>
+
+      <label for="productImageUrl">URL изображения:</label><br>
+      <input type="text" id="productImageUrl"><br><br>
+
+      <label for="productPrice">Цена:</label><br>
+      <input type="number" id="productPrice"><br><br>
+
+      <label for="productDescription">Описание:</label><br>
+      <textarea id="productDescription"></textarea><br><br>
+
+      <label for="productDelivery">Доставка:</label><br>
+      <input type="text" id="productDelivery"><br><br>
+
+      <button onclick="addProduct()">Добавить товар</button>
+      <button onclick="showRemoveProductModal(); closeAdminPanel();">Удалить товар</button>
+      <button onclick="closeAdminPanel()">Закрыть панель</button>
     </div>
+  </div>
 
-    <div id="removeCategoryModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeRemoveCategoryModal()">×</span>
-            <h2>Удалить категорию</h2>
-            <ul id="categoryList"></ul> 
-        </div>
+  <div id="removeProductModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRemoveProductModal()">×</span>
+      <h2>Удалить товар</h2>
+      <ul id="productList"></ul>
     </div>
+  </div>
 
-    <main>
-        <div class="container">
-            <nav class="categories">
-                <button data-category="all" class="category-btn active">Все товары</button>
-            </nav>
-       
-            <div class="filters">
-                <div class="price-filter">
-                    <label for="price-sort">Цена:</label>
-                    <select id="price-sort">
-                        <option value="ascending">По возрастанию</option>
-                        <option value="descending">По убыванию</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="dog">
-              <button id="adminBtn">Admin</button>
-          </div>
-          
-            <div class="products-grid" id="productsGrid">
-            </div>
-        </div>
-    </main>
-
-    <div class="cart-sidebar"> 
-        <h2>Корзина</h2>
-        <div class="cart-items-container" id="cartItemsContainer">
-            <ul id="cartItems"></ul>
-        </div>
-        <div class="cart-total" id="cartTotal"></div>
-        <button id="clearCartBtn">Очистить корзину</button>
-        <button id="closeCartBtn">X</button>
+  <div id="removeCategoryModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRemoveCategoryModal()">×</span>
+      <h2>Удалить категорию</h2>
+      <ul id="categoryList"></ul>
     </div>
+  </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>О нас</h3>
-                    <p>Мы предлагаем широкий ассортимент бытовой техники от ведущих производителей.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Контакты</h3>
-                    <p>
-                        <a href="tel:+71234567890">+7 (999) 666-55-44</a><br>
-                        <a href="mailto:info@example.com">project@gmail.com</a>
-                    </p>
-                </div>
-                <div class="footer-section">
-                  <h3>Политика конфиденциальности</h3>
-                  <p>Мы собираем и используем ваши личные данные исключительно для обработки заказов и улучшения обслуживания.</p>
-                </div>
-            </div>
-            <div class="copyright">
-                © [Pure Home Products], 2024. Все права защищены.
-            </div>
+  <main>
+    <div class="container">
+      <nav class="categories">
+        <button data-category="all" class="category-btn active">Все товары</button>
+      </nav>
+
+      <div class="filters">
+        <div class="price-filter">
+          <label for="price-sort">Цена:</label>
+          <select id="price-sort">
+            <option value="ascending">По возрастанию</option>
+            <option value="descending">По убыванию</option>
+          </select>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="dog">
+        <button id="adminBtn">Admin</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+      </div>
+    </div>
+  </main>
+
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h2>Корзина</h2>
+      <button id="closeCartBtn">X</button>
+    </div>
+    <div class="cart-items-container" id="cartItemsContainer">
+      <ul id="cartItems"></ul>
+    </div>
+    <div class="cart-total" id="cartTotal"></div>
+    <button id="clearCartBtn" class="clear-cart"> 
+        <span>Очистить корзину</span> 
+      </button>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>О нас</h3>
+          <p>Мы предлагаем широкий ассортимент бытовой техники от ведущих производителей.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Контакты</h3>
+          <p>
+            <a href="tel:+71234567890">+7 (999) 666-55-44</a><br>
+            <a href="mailto:info@example.com">project@gmail.com</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Политика конфиденциальности</h3>
+          <p>Мы собираем и используем ваши личные данные исключительно для обработки заказов и улучшения
+            обслуживания.</p>
+        </div>
+      </div>
+      <div class="copyright">
+        © [Pure Home Products], 2024. Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

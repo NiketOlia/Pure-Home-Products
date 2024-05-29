@@ -442,22 +442,6 @@ fetch('products.json')
         `;
         cartItems.appendChild(li);
     };
-
-    // Пример использования функции
-    addItemToCart({
-        id: 1,
-        name: 'Стиральная машина LG',
-        imageUrl: 'https://zetzet.ru/wa-data/public/shop/products/84/15/1811584/images/1800488/1800488.750.png'
-    });
-    addItemToCart({
-        id: 2,
-        name: 'Холодильник Samsung',
-        imageUrl: 'https://main-cdn.sbermegamarket.ru/big1/hlr-system/-74/130/013/429/153/3/100028033843b0.jpg'
-    });
-    
-    // и т.д.
-
-    // Функция удаления товаров из корзины
     window.removeFromCart = (id) => {
         const items = cartItems.querySelectorAll('li');
         items.forEach(item => {
