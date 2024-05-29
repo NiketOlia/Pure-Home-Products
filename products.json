@@ -1,0 +1,335 @@
+[
+  {
+    "id": 1,
+    "name": "Стиральная машина LG",
+    "category": "Бытовая техника",
+    "imageUrl": "https://zetzet.ru/wa-data/public/shop/products/84/15/1811584/images/1800488/1800488.750.png",
+    "price": 25000,
+    "description": "Современная стиральная машина LG с функцией стирки паром и большой загрузкой.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 2,
+    "name": "Холодильник Samsung",
+    "category": "Бытовая техника",
+    "imageUrl": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-74/130/013/429/153/3/100028033843b0.jpg",
+    "price": 35000,
+    "description": "Вместительный холодильник Samsung с системой No Frost и электронным управлением.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 3,
+    "name": "Посудомоечная машина Bosch",
+    "category": "Бытовая техника",
+    "imageUrl": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/1689641/100000018172b0.jpg",
+    "price": 40000,
+    "description": "Тихая и эффективная посудомоечная машина Bosch с множеством режимов мойки.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 4,
+    "name": "Духовой шкаф Electrolux",
+    "category": "Бытовая техника",
+    "imageUrl": "https://cdn.leroymerlin.ru/lmru/image/upload/f_auto/q_auto/dpr_1.0/c_pad/w_1000/h_1000/v1571977824/lmcode/JuFtcPMjUk6EKDXLg61eDw/81948545_01.jpg",
+    "price": 30000,
+    "description": "Многофункциональный духовой шкаф Electrolux с конвекцией и грилем.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 5,
+    "name": "Газовая панель Hansa",
+    "category": "Бытовая техника",
+    "imageUrl": "https://static.insales-cdn.com/images/products/1/4740/831124100/product_477_2.jpg",
+    "price": 15000,
+    "description": "Газовая варочная панель Hansa с чугунными решетками и автоматическим электроподжигом.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 6,
+    "name": "Кофемашина DeLonghi Magnifica S",
+    "category": "Бытовая техника",
+    "imageUrl": "https://neamazon.ru/d/kofemashina_delonghi_ecam_25031_s.jpg",
+    "price": 30000,
+    "description": "Автоматическая кофемашина DeLonghi Magnifica S для приготовления идеального эспрессо и капучино одним нажатием.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 7,
+    "name": "Робот-пылесос Xiaomi Mi Robot Vacuum-Mop 2",
+    "category": "Бытовая техника",
+    "imageUrl": "https://electroceh.ru/upload/iblock/68d/ivt2z24e6gaxvicx4dxabv06qjrrp866.jpeg",
+    "price": 25000,
+    "description": "Умный робот-пылесос Xiaomi Mi Robot Vacuum-Mop 2 для сухой и влажной уборки, управляемый со смартфона.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 8,
+    "name": "Стиральная машина-автомат Indesit",
+    "category": "Бытовая техника",
+    "imageUrl": "https://m.onlinetrade.ru/img/items/m/indesit_iwub_4085_33492_1.jpg",
+    "price": 18000,
+    "description": "Надежная стиральная машина-автомат Indesit с фронтальной загрузкой и множеством режимов стирки.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 9,
+    "name": "Микроволновая печь Samsung",
+    "category": "Бытовая техника",
+    "imageUrl": "https://www.eldorado.ru/img1/p/b/07558200.jpg",
+    "price": 8000,
+    "description": "Компактная микроволновая печь Samsung с грилем и функцией разморозки.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  }
+   
+  
+
+  ,{
+    "id": 10,
+    "name": "Ноутбук Acer Aspire 5",
+    "category": "Электроника",
+    "imageUrl": "https://cdn.rbt.ru/images/gen/item_image/image/10323/24/1032257_r8005.jpg",
+    "price": 45000,
+    "description": "Производительный ноутбук Acer Aspire 5 с процессором Intel Core i5 и 8 ГБ оперативной памяти, идеально подходит для работы и учебы.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 11,
+    "name": "Смартфон Xiaomi Redmi Note 10 Pro",
+    "category": "Электроника",
+    "imageUrl": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/202/051/669/131/618/43/100028274010b0.jpg",
+    "price": 18000,
+    "description": "Мощный смартфон Xiaomi Redmi Note 10 Pro с отличной камерой и NFC модулем для бесконтактных платежей.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 12,
+    "name": "Телевизор LG OLED CX",
+    "category": "Электроника",
+    "imageUrl": "https://www.lg.com/ru/images/televisions/md07506681/gallery/medium01.jpg",
+    "price": 120000,
+    "description": "Инновационный телевизор LG OLED CX с непревзойденным качеством изображения и звука, создающий эффект полного погружения.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 13,
+    "name": "Наушники Apple AirPods Pro",
+    "category": "Электроника",
+    "imageUrl": "https://votkinsk.apple-nova.ru/files/thumb/item/MWP22_AV2%20(1).jpg?s=600,300,600,300",
+    "price": 15000,
+    "description": "Беспроводные наушники Apple AirPods Pro с активным шумоподавлением для комфортного прослушивания музыки.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 14,
+    "name": "Планшет Samsung Galaxy Tab S8",
+    "category": "Электроника",
+    "imageUrl": "https://img.global.news.samsung.com/kz_ru/wp-content/uploads/2022/02/Galaxy-Tab-S8-Series_PR_main3.jpg",
+    "price": 50000,
+    "description": "Стильный и мощный планшет Samsung Galaxy Tab S8 с ярким AMOLED-дисплеем и поддержкой стилуса S Pen.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 15,
+    "name": "Игровая консоль Sony PlayStation 5",
+    "category": "Электроника",
+    "imageUrl": "https://www.mobicom.ru/upload/iblock/7cc/kbzmmxhqi7qonjnuvfrqglrbe7yrkfv2.jpeg",
+    "price": 50000,
+    "description": "Современная игровая консоль Sony PlayStation 5 с невероятной производительностью и новейшими технологиями.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 16,
+    "name": "Фитнес-браслет Huawei Band 6",
+    "category": "Электроника",
+    "imageUrl": "https://static.nix.ru/images/huawei-band-6-graphite-black-5184726919.jpg?good_id=518472&width=500&height=500&view_id=6919",
+    "price": 5000,
+    "description": "Стильный фитнес-браслет Huawei Band 6 с цветным AMOLED-дисплеем и множеством функций для контроля здоровья и активности.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 17,
+    "name": "Умная колонка Яндекс Станция Макс",
+    "category": "Электроника",
+    "imageUrl": "https://mobilo4ka.ru/image/cache/bc9cdeaab8b77158689db930e2d8d4c4.jpg",
+    "price": 15000,
+    "description": "Мощная умная колонка Яндекс Станция Макс с отличным звуком и возможностью управления умным домом.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 18,
+    "name": "Внешний жесткий диск WD My Passport",
+    "category": "Электроника",
+    "imageUrl": "https://www.ixbt.com/storage/wd-mypassport-wireless/p01.jpg",
+    "price": 5000,
+    "description": "Компактный внешний жесткий диск WD My Passport для хранения фотографий, видео и других данных.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  }
+
+
+  , {
+    "id": 19,
+    "name": "Диван Берлин",
+    "category": "Мебель",
+    "imageUrl": "https://www.deon-mebel.ru/images/detailed/826/15_i0qt-5m.jpg",
+    "price": 45000,
+    "description": "Удобный угловой диван с механизмом трансформации для ежедневного сна, обивка - износостойкая ткань.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 20,
+    "name": "Кровать Скандинавия",
+    "category": "Мебель",
+    "imageUrl": "https://static.pushe.ru/upload/iblock/51d/ui4jlvz7u0v5oeqmp826yao43fgec2mc.jpg",
+    "price": 25000,
+    "description": "Двуспальная кровать с высоким изголовьем из натурального дерева, стильный минималистичный дизайн.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 21,
+    "name": "Стол обеденный Современный",
+    "category": "Мебель",
+    "imageUrl": "https://img.inmyroom.ru/inmyroom/resize/700x700/jpg:85/uploads/photo/file/44/4457/jpg_1000_44577033-ad50-41f1-8d72-17de126d1b2b.jpg?sign=142cb7d117b4d4f4884699b231a9dd37e8a19eaeea3a97e806cdf3bcd60802b5",
+    "price": 15000,
+    "description": "Раздвижной современный стол для семьи",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 22,
+    "name": "Стулья Классика",
+    "category": "Мебель",
+    "imageUrl": "https://ir.ozone.ru/s3/multimedia-t/c1000/6398435933.jpg",
+    "price": 4000,
+    "description": "Набор из 4 стульев и прочной деревянной основой.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 23,
+    "name": "Шкаф-купе Комфорт",
+    "category": "Мебель",
+    "imageUrl": "https://yourroom.ru/shopfiles/img_products/full_8731cc1ce643ebd2ab0998714dc17b15.jpg",
+    "price": 30000,
+    "description": "Вместительный шкаф с зеркальными раздвижными дверями, организует пространство и добавляет света.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 24,
+    "name": "Тумба прикроватная Минимал",
+    "category": "Мебель",
+    "imageUrl": "https://ellipsefurniture.ru/upload/iblock/67f/67fccd74d6cc5573118f8f3984d3f0cd.png",
+    "price": 5000,
+    "description": "Компактная тумба с ящиками для хранения книг и аксессуаров.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 25,
+    "name": "Журнальный столик Стиль",
+    "category": "Мебель",
+    "imageUrl": "https://thumbs.dreamstime.com/b/%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D1%88%D0%BD%D1%8B%D0%B9-%D0%BA%D0%B0%D1%88%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9-%D1%81%D1%82%D0%BE%D0%BB-%D0%B2-%D1%81%D1%82%D0%B8%D0%BB%D0%B5-vintage-179301401.jpg",
+    "price": 8000,
+    "description": "Стильный столик из массива дерева с лаконичным дизайном.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 26,
+    "name": "Кресло Эргономика",
+    "category": "Мебель",
+    "imageUrl": "https://ergotronica.ru/static/product_desc_pics/4646_pic6.jpg",
+    "price": 12000,
+    "description": "Комфортное кресло с регулируемой спинкой и подлокотниками, идеально для чтения или отдыха.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 27,
+    "name": "Зеркало Венеция",
+    "category": "Мебель",
+    "imageUrl": "https://shop-aquaton.ru/upload/resize_cache/iblock/692/535_450_1/zerkalo_akvaton_veneciya_75_beloe_1a151102vnl10_izdelie.jpg",
+    "price": 5000,
+    "description": "Большое зеркало в раме, создает ощущение простора.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  }
+
+
+   ,{
+    "id": 28,
+    "name": "Сервиз Лимонный сад",
+    "category": "Посуда",
+    "imageUrl": "https://mir-samovarov.ru/wa-data/public/shop/products/42/69/6942/images/18803/18803.600.jpg",
+    "price": 3500,
+    "description": "Чайный сервиз из фарфора на 6 персон с ярким лимонным декором.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 29,
+    "name": "Кастрюля Профи",
+    "category": "Посуда",
+    "imageUrl": "https://img.freepik.com/premium-photo/saucepan-white-background_392895-355923.jpg",
+    "price": 1500,
+    "description": "Прочная кастрюля из нержавеющей стали с толстым дном и крышкой.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 30,
+    "name": "Сковорода Антипригарная",
+    "category": "Посуда",
+    "imageUrl": "https://img.freepik.com/premium-photo/metal-frying-pan-with-nonstick-coating-on-white-background_544249-2575.jpg",
+    "price": 1000,
+    "description": "Сковорода с антипригарным покрытием диаметром 26 см, подходит для всех типов плит.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 31,
+    "name": "Ножи Классические",
+    "category": "Посуда",
+    "imageUrl": "https://www.superposuda.ru/upload/articles/articles229.jpg",
+    "price": 2000,
+    "description": "Набор из 3 ножей с острыми лезвиями из нержавеющей стали.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 32,
+    "name": "Чашки Кофейные",
+    "category": "Посуда",
+    "imageUrl": "https://previews.123rf.com/images/picsfive/picsfive1110/picsfive111000203/11007196-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D1%84%D0%B5%D0%B9%D0%BD%D1%8B%D0%B5-%D1%87%D0%B0%D1%88%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-%D0%BA%D0%B0%D0%B6%D0%B4%D1%8B%D0%B9-%D0%B8%D0%B7-%D0%BD%D0%B8%D1%85-%D1%80%D0%B0%D1%81%D1%81%D1%82%D1%80%D0%B5%D0%BB%D1%8F%D0%BB%D0%B8.jpg",
+    "price": 1000,
+    "description": "Набор из 4 чашек с блюдцами из тонкого фарфора.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 33,
+    "name": "Тарелки Обеденные",
+    "category": "Посуда",
+    "imageUrl": "https://vip-posuda.com/images/detailed/65/%D0%A4%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BE%D0%B1%D0%B5%D0%B4%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D1%82%D0%B0%D1%80%D0%B5%D0%BB%D0%BA%D0%B8_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5__%D0%91%D0%BB%D0%B0%D0%BD%D0%BA%D0%BE__26_%D1%81%D0%BC__6_%D1%88%D1%82.jpg",
+    "price": 1500,
+    "description": "Набор из 6 глубоких тарелок из керамики с красивым дизайном.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 34,
+    "name": "Бокалы для вина",
+    "category": "Посуда",
+    "imageUrl": "https://img.freepik.com/premium-photo/wine-glasses-isolated-white-background_114853-479.jpg",
+    "price": 1200,
+    "description": "Набор из 3 бокалов для красного вина из тонкого стекла.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 35,
+    "name": "Форма для выпечки",
+    "category": "Посуда",
+    "imageUrl": "https://img.freepik.com/premium-photo/a-metal-baking-dish-on-a-white-background-with-copy-space_625455-1821.jpg",
+    "price": 800,
+    "description": "Силиконовая форма для выпечки кексов, устойчивая к высоким температурам.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  },
+  {
+    "id": 36,
+    "name": "Блендер погружной",
+    "category": "Посуда",
+    "imageUrl": "https://img.mvideo.ru/Pdb/20042916b.jpg",
+    "price": 2500,
+    "description": "Погружной блендер с несколькими скоростями и насадками.",
+    "delivery": "С 9:00 по 22:00 по будням"
+  }
+]
+
+  
