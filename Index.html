@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автозапчасти</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Автозапчасти</h1>
+        <div>
+            <button id="add-product-btn">Добавить товар</button>
+            <button id="delete-product-btn" class="btn">Удалить товар/категорию</button>
+        </div>     
+    </header>
+    <main>
+        <!--Категории -->
+        <div id="product-catalog">
+            <button id="add-category-btn">Добавить категорию</button>
+            <h2>Категории</h2>
+            <div id="category-block">
+                <ul>
+                    <li><a href="#" data-category="all" class="category-link active">Все</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Категории -->
+        <!--Товары -->
+        <div id="product-list">
+            
+        </div>
+        <!-- Товары -->
+    </main>
+    <!--Добавление категорий -->
+    <div id="add-category-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить категорию</h2>
+            <form id="add-category-form">
+                <div class="form-group">
+                    <label for="category-name">Название категории:</label>
+                    <input type="text" id="category-name" name="category-name" required>
+                </div>  
+                <button type="submit" class="btn">Добавить</button>  
+            </form>
+        </div>
+    </div>
+    <!--Добавление категорий -->
+    <!--Дабавление продуктов -->
+    <div id="add-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить товар</h2>
+            <form id="add-product-form">
+                <div class="form-group">
+                    <label for="product-name">Название:</label>
+                    <input type="text" id="product-name" name="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Категория:</label>
+                    <select id="product-category" name="product-category">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Цена:</label>
+                    <input type="number" id="product-price" name="product-price" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-description">Описание:</label>
+                    <textarea id="product-description" name="product-description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Количество:</label>
+                <input type="number" id="product-quantity" name="product-quantity" value="1" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Изображение:</label>
+                    <input type="text" id="product-image" name="product-image" placeholder="Введите URL изображения">
+                </div>
+                <button type="submit" class="btn">Добавить</button>
+            </form>
+        </div>
+    </div>
+    <!--Дабавление продуктов -->
+    <!--Удаление категорий и продуктов -->
+    <div id="delete-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Удалить товар/категорию</h2>
+            <form class="add-product-form">
+            <div class="form-group">
+                <label for="delete-product">Выберите товар для удаления:</label>
+                <select id="delete-product"></select>
+            </div>
+            <div class="form-group">
+                <label for="delete-category">Выберите категорию для удаления:</label>
+                <select id="delete-category">
+                </select>
+            </div>
+                <button type="button" class="btn" id="delete-product-btnc">Удалить товар</button>
+                <button type="button" class="btn" id="delete-category-btn">Удалить категорию</button>
+            </form>
+        </div>
+    </div>
+    <!--Удаление категорий и продуктов -->
+    <!-- Корзина -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <p>Итого: <span id="cart-total">0</span> руб.</p>
+            <div class="btn-container">
+                <button id="clear-cart-btn" class="btn">Очистить корзину</button>
+                <button id="checkout-btn" class="btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    <!-- Корзина -->
+    <div id="cart">
+        <span id="cart-icon">&#128722;</span>
+        <span id="cart-count">0</span>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Автозапчасти. Все права защищены.</p>
+            
+        </div>
+    </footer>  
+    <script  src="script.js"></script>
+</body>
+</html>
