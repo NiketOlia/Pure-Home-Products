@@ -1,9 +1,10 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; 
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -12,13 +13,15 @@ body {
   padding: 20px;
 }
 
-/* Хедер */
+
 header {
-  background: linear-gradient(to bottom, #a8e09b, #91ff91);
+  background:#f44336 ;
   padding: 20px 0;
   text-align: center;
-  position: relative; /* Относительное позиционирование для корзины */
+  position: relative;
 }
+
+
 
 header h1 {
   color: white;
@@ -37,11 +40,13 @@ header button {
   border-radius: 5px;
 }
 
+
+
 header button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Меню навигации */
+
 .categories {
   display: flex;
   justify-content: center;
@@ -63,14 +68,14 @@ header button:hover {
   color: #333;
 }
 
-/* Фильтры */
+
 .filters {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-/* Сетка товаров */
+
 .products-grid {
   display: flex;
   flex-wrap: wrap;
@@ -79,17 +84,16 @@ header button:hover {
 }
 
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 350px;
+  border: 1px solid #eeeeee; 
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
 .product-card img {
@@ -108,8 +112,12 @@ header button:hover {
   margin-bottom: 5px;
 }
 
+main {
+  flex-grow: 1;
+}
+
 .product-card button {
-  background-color: #4caf50;
+  background-color: #f44336;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -119,10 +127,10 @@ header button:hover {
 }
 
 .product-card button:hover {
-  background-color: #45a049;
+  background-color: #9c3e3e73;
 }
 
-/* Корзина */
+
 .cart-sidebar {
   position: fixed;
   top: 0;
@@ -195,7 +203,7 @@ header button:hover {
   font-weight: bold;
 }
 
-/* Кнопка закрытия корзины */
+
 #closeCartBtn {
   position: absolute;
   top: 10px;
@@ -208,7 +216,7 @@ header button:hover {
   color: red;
 }
 
-/* Панель администратора */
+
 #adminPanel {
   position: fixed;
   top: 0;
@@ -216,7 +224,7 @@ header button:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 100;
@@ -233,7 +241,7 @@ header button:hover {
 }
 
 #adminPanel h2 {
-  color: #4caf50;
+  color: #c54e4e;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -266,7 +274,7 @@ header button:hover {
 }
 
 #adminPanel button {
-  background-color: #4caf50;
+  background-color: #f44336;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -278,10 +286,10 @@ header button:hover {
 }
 
 #adminPanel button:hover {
-  background-color: #45a049;
+  background-color: #d32f2f;
 }
 
-/* Дополнительные стили для панели администратора */
+
 #adminPanel .category-list,
 #adminPanel .product-list {
   display: flex;
@@ -307,7 +315,7 @@ header button:hover {
   background-color: #d32f2f;
 }
 
-/* Модальные окна */
+
 .modal {
   display: none;
   position: fixed;
@@ -347,7 +355,7 @@ header button:hover {
   margin-bottom: 10px;
 }
 
-/* Категории товаров */
+
 .categories-container {
   display: flex;
   flex-wrap: wrap;
@@ -377,11 +385,11 @@ header button:hover {
   border-radius: 5px;
 }
 
-/* Подвал (Footer) */
+
 .footer {
-  background-color: #4caf50;
+  background-color: #f44336; 
+  color: #ffffff;
   padding: 20px 0;
-  color: white;
   text-align: center;
 }
 
@@ -432,7 +440,7 @@ header button:hover {
   text-decoration: underline;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -443,12 +451,12 @@ header button:hover {
   }
 
   .footer-content {
-    flex-direction: column; /* Изменяем направление на столбцы */
-    align-items: center; /* Выравниваем элементы по центру */
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-section {
-    width: 100%; /* Ширина каждой секции на 100% */
+    width: 100%;
   }
 }
 
@@ -457,18 +465,18 @@ header button:hover {
 }
 
 .dog {
-  position: fixed; /* Фиксируем блок на экране */
-  top: 80px; /*  Помещаем чуть ниже хедера (отрегулируйте значение по необходимости) */
-  left: 20px; /*  Отступ от правого края */
+  position: fixed;
+  top: 80px;
+  left: 20px;
   transition: all 0.3s ease;
-  z-index: 10; /* Устанавливаем z-index, чтобы кнопка была над другими элементами */
+  z-index: 10;
 }
 .dog:hover {
   transform: translateY(-5px); 
 }
 
 #adminBtn {
-  background-color: #f44336; /* Красный цвет */ 
+  background-color: #f44336;
   border: none;
   color: white;
   padding: 12px 20px;
@@ -482,14 +490,14 @@ header button:hover {
 }
 
 #adminBtn:hover {
-  background-color: #d32f2f; /* Более темный красный при наведении */
+  background-color: #d32f2f;
   box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
 }
-/* Анимация корзины */
+
 .cart-container {
   position: fixed;
-  bottom: 20px; /* Отступ от низа */
-  right: 20px; /* Отступ от правого края */
+  bottom: 20px;
+  right: 20px;
 }
 
 
@@ -497,18 +505,18 @@ header button:hover {
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #cartToggleBtn:hover {
-  transform: scale(1.1); /* Увеличиваем при наведении */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .binok {
   width: 80px;
   height: 80px;
-  transition: transform 0.3s ease; /* Добавляем плавность при наведении */
+  transition: transform 0.3s ease;
 }
 
 .cart-notification {
@@ -520,11 +528,11 @@ header button:hover {
   border-radius: 50%;
   padding: 2px 6px;
   font-size: 12px;
-  display: none; /* Скрываем уведомление по умолчанию */
+  display: none;
 }
 
 .cart-notification.active {
-  display: block; /* Показываем, когда есть товары в корзине */
+  display: block;
 }
 #clearCartBtn {
   background-color: transparent; 
@@ -542,13 +550,13 @@ header button:hover {
   display: inline-block;
   position: relative;
   z-index: 2; 
-  transition: all 0.3s ease; /* Добавляем transition для текста */
+  transition: all 0.3s ease;
 }
 
 #clearCartBtn:hover {
   background-color: #f44336; 
   color: white; 
-  box-shadow: 0 0 10px rgba(244, 67, 54, 0.5); /* Тень при наведении */
+  box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
 }
 
 #clearCartBtn::before { 
@@ -557,13 +565,13 @@ header button:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Фон изначально занимает всю высоту */
-  background-color: #f44336; /* Цвет фона совпадает с цветом текста */
+  height: 100%;
+  background-color: #f44336;
   z-index: 1;
   transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Смещаем фон влево */
+  transform: translateX(-100%);
 }
 
 #clearCartBtn:hover::before {
-  transform: translateX(0); /* Возвращаем фон на место при наведении */
+  transform: translateX(0);
 }

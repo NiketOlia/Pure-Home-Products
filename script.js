@@ -1,5 +1,3 @@
-
-// ---  ФУНКЦИИ ДЛЯ РАБОТЫ С LOCAL STORAGE  ---
 function getProductsFromLocalStorage() {
   const productsStr = localStorage.getItem('products');
   return productsStr ? JSON.parse(productsStr) : [];
@@ -18,7 +16,7 @@ function saveCategoriesToLocalStorage(categories) {
   localStorage.setItem('categories', JSON.stringify(categories));
 }
 
-// ---  ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ  ---
+
 const productsGrid = document.getElementById('productsGrid');
 const categoryButtonsContainer = document.querySelector('.categories');
 const priceSortSelect = document.getElementById('price-sort');
@@ -34,13 +32,13 @@ const removeProductModal = document.getElementById('removeProductModal');
 const productList = document.getElementById('productList');
 const removeCategoryModal = document.getElementById('removeCategoryModal');
 const categoryList = document.getElementById('categoryList'); 
-const clearCartButton = document.getElementById('clearCartBtn'); // Получаем ссылку на кнопку
+const clearCartButton = document.getElementById('clearCartBtn');
 
-//  Инициализация товаров и категорий из localStorage
+
 let currentProducts = getProductsFromLocalStorage();
 let currentCategories = getCategoriesFromLocalStorage();
 
-// ---  ФУНКЦИИ  ---
+
 function displayProducts(filteredProducts) {
   productsGrid.innerHTML = ''; 
 
@@ -58,7 +56,7 @@ function displayProducts(filteredProducts) {
     productsGrid.innerHTML += productCard;
   });
 
-  //  Обработчики событий для кнопок "Добавить в корзину" 
+
   const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
   addToCartButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -106,7 +104,6 @@ function updateCartDisplay() {
 
   let cartTotal = 0;
 
-  //  Группируем товары в корзине
   const groupedCartItems = {};
   cart.forEach(item => {
     if (groupedCartItems[item.id]) {
@@ -135,7 +132,7 @@ function updateCartDisplay() {
   cartTotalElement.textContent = `Итого: ${cartTotal} руб.`;
 
   if (displayedCartItems.length > 3) {
-    const cartItemsContainer = document.getElementById('cartItemsContainer'); // Получаем контейнер с товарами
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
     cartItemsContainer.classList.add('cart-slider');
   } else {
   }
@@ -149,7 +146,7 @@ function updateCartDisplay() {
     });
   });
 
-  // Обновляем видимость кнопки "Очистить корзину"
+
   clearCartButton.style.display = cart.length > 0 ? 'block' : 'none'; 
 }
 
@@ -170,18 +167,18 @@ function removeProductFromCart(productId) {
 }
 
 function updateCategoryButtons() {
-  //  Очищаем контейнер кнопок
+
   categoryButtonsContainer.innerHTML = '';
 
-  //  Добавляем кнопку "Все товары"
+
   const allProductsButton = document.createElement('button');
   allProductsButton.dataset.category = 'all';
   allProductsButton.textContent = 'Все товары';
   allProductsButton.classList.add('category-btn');
-  allProductsButton.classList.add('active'); //  По умолчанию выбрана категория "Все товары"
+  allProductsButton.classList.add('active');
   categoryButtonsContainer.appendChild(allProductsButton);
 
-  //  Добавляем кнопки для каждой категории
+
   currentCategories.forEach(category => {
     if (category !== 'all') {
       const categoryButton = document.createElement('button');
@@ -192,7 +189,7 @@ function updateCategoryButtons() {
     }
   });
 
-  //  Обработчики событий для кнопок категорий
+
   const categoryButtons = document.querySelectorAll('.category-btn');
   categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -216,16 +213,16 @@ function filterAndDisplayProducts(selectedCategory = 'all') {
 
 function sortProductsByPrice(productsToSort, sortType) {
   if (sortType === 'descending') {
-    return productsToSort.slice().sort((a, b) => b.price - a.price); // Сортировка по убыванию
+    return productsToSort.slice().sort((a, b) => b.price - a.price);
   }
   if (sortType === 'ascending') {
     return productsToSort.slice().sort((a, b) => a.price - b.price); 
   } else {
-    return productsToSort; //  По умолчанию не сортируем
+    return productsToSort;
   }
 }
 
-// Функция для закрытия модального окна по ID
+
 function closeModal(modalId) {
   const modalToClose = document.getElementById(modalId);
   if (modalToClose) {
@@ -234,7 +231,7 @@ function closeModal(modalId) {
 }
 
 function showRemoveProductModal() {
-  closeModal('removeProductModal'); // Закрываем предыдущие окна
+  closeModal('removeProductModal');
   closeModal('removeCategoryModal'); 
   productList.innerHTML = ''; 
   currentProducts.forEach(product => {
@@ -263,7 +260,7 @@ function removeProduct(productId) {
 }
 
 function showRemoveCategoryModal() {
-  closeModal('removeProductModal'); // Закрываем предыдущие окна
+  closeModal('removeProductModal');
   closeModal('removeCategoryModal');
   categoryList.innerHTML = '';
   currentCategories.forEach(category => {
@@ -342,13 +339,13 @@ function addProduct() {
 function updateAdminSelects() {
   const productCategorySelect = document.getElementById('productCategory');
 
-  //  Очищаем списки
+
   productCategorySelect.innerHTML = '';
 
-  //  Создаем Set для хранения уникальных категорий 
+
   const categories = new Set(currentCategories);
 
-  //  Добавляем категории в выпадающий список
+
   categories.forEach(category => {
     const option = document.createElement('option');
     option.value = category;
@@ -370,7 +367,6 @@ function updateCartNotification() {
   }
 }
 
-//  --- ОБРАБОТЧИКИ СОБЫТИЙ --- 
 adminBtn.addEventListener('click', () => {
   adminPanel.style.display = 'flex';
   updateAdminSelects();
@@ -392,56 +388,45 @@ priceSortSelect.addEventListener('change', () => {
   filterAndDisplayProducts();
 });
 
-// ---  ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ ---
+
 updateCartNotification();
 updateCategoryButtons();
 filterAndDisplayProducts();
 
-// Функция для очистки корзины
+
 function clearCart() {
-  localStorage.removeItem('cart'); // Удаляем данные корзины из localStorage
-  updateCartDisplay(); // Обновляем отображение корзины
-  updateCartNotification(); // Обновляем уведомление о количестве товаров
+  localStorage.removeItem('cart');
+  updateCartDisplay();
+  updateCartNotification();
 }
 
 
-//  Добавляем обработчик события "click" к кнопке
+
 clearCartButton.addEventListener('click', clearCart);
 
 fetch('products.json') 
   .then(response => response.json())
   .then(data => {
-    currentProducts = data; // Сохраняем данные в переменную 
-    saveProductsToLocalStorage(currentProducts); // Сохраняем в localStorage
-    updateCategoryButtons(); // Обновляем кнопки категорий
-    filterAndDisplayProducts(); // Отображаем товары 
+    currentProducts = data;
+    saveProductsToLocalStorage(currentProducts);
+    updateCategoryButtons();
+    filterAndDisplayProducts();
   })
   .catch(error => console.error('Ошибка загрузки данных:', error));
 
   fetch('category.json')
   .then(response => response.json())
   .then(data => {
-    currentCategories = data; // Сохраняем данные в переменную 
-    saveCategoriesToLocalStorage(currentCategories); // Сохраняем в localStorage
-    updateCategoryButtons(); // Обновляем кнопки категорий
-    filterAndDisplayProducts(); // Отображаем товары 
+    currentCategories = data;
+    saveCategoriesToLocalStorage(currentCategories);
+    updateCategoryButtons();
+    filterAndDisplayProducts();
   })
   .catch(error => console.error('Ошибка загрузки данных:', error));
 
   document.addEventListener('DOMContentLoaded', () => {
-    const cartItemsContainer = document.getElementById('cartItemsContainer');
     const cartItems = document.getElementById('cartItems');
 
-    // Пример добавления товаров в корзину для тестирования
-    const addItemToCart = (item) => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <img src="${item.imageUrl}" alt="${item.name}" width="50" height="50">
-            <span>${item.name}</span>
-            <button onclick="removeFromCart(${item.id})">Удалить</button>
-        `;
-        cartItems.appendChild(li);
-    };
     window.removeFromCart = (id) => {
         const items = cartItems.querySelectorAll('li');
         items.forEach(item => {
